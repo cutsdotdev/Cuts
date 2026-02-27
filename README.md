@@ -7,7 +7,7 @@
 [![Download for Windows x64](https://img.shields.io/badge/Windows%20x64-Download-blue?style=flat-square&logo=windows)](https://github.com/cutsdotdev/Cuts/releases)
 [![Download for Windows ARM64](https://img.shields.io/badge/Windows%20ARM64-Download-blue?style=flat-square&logo=windows)](https://github.com/cutsdotdev/Cuts/releases)
 
-![Cuts demo](https://public.cuts.dev/demo.gif)
+![Cuts demo](images/demo.gif)
 
 Cuts is a desktop app that replaces the 40-tab cloud console chaos with one fast interface. When the CLI becomes the API, the potential is unlimited. Search every resource across every account, talk to an AI that knows about your infrastructure, and build dashboards and scripts. All without leaving your machine. Use your CLI, your permissions, and your AI API key. No account required and no network requests to anywhere but your cloud provider.
 
