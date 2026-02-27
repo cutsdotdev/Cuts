@@ -7,7 +7,9 @@
 [![Download for Windows x64](https://img.shields.io/badge/Windows%20x64-Download-blue?style=flat-square&logo=windows)](https://github.com/cutsdotdev/Cuts/releases)
 [![Download for Windows ARM64](https://img.shields.io/badge/Windows%20ARM64-Download-blue?style=flat-square&logo=windows)](https://github.com/cutsdotdev/Cuts/releases)
 
-Cuts is a desktop app that replaces the 40-tab cloud console chaos with one fast interface. When the CLI becomes the API, the potential is unlimited. Search every resource across every account, talk to an AI that knows about your infrastructure, and build dashboards and scripts — all without leaving your machine. Use your CLI, your permissions, and your AI API key. No account required and no network requests to anywhere but your cloud provider.
+![Cuts demo](https://public.cuts.dev/demo.gif)
+
+Cuts is a desktop app that replaces the 40-tab cloud console chaos with one fast interface. When the CLI becomes the API, the potential is unlimited. Search every resource across every account, talk to an AI that knows about your infrastructure, and build dashboards and scripts. All without leaving your machine. Use your CLI, your permissions, and your AI API key. No account required and no network requests to anywhere but your cloud provider.
 
 ---
 
@@ -41,7 +43,7 @@ Unified search across all connected cloud accounts. Instant lookups.
 
 1. Connect a cloud provider via Quick Connect.
 2. Resources appear in the left pane as they're indexed.
-3. Press `Cmd+P` (macOS) or `Ctrl+P` (Windows) to search. Type anything — names, services, or even add your own personalized names and tags to resources.
+3. Press `Cmd+P` (macOS) or `Ctrl+P` (Windows) to search. Type names, services, or even add your own personalized names and tags to resources.
 4. Group related resources into Stacks, add additional links to resources, pin them, and more.
 
 ---
@@ -81,7 +83,7 @@ Build, test, and run operational scripts. Local execution with a run history.
 **How to use it:**
 
 1. Open the Scripts panel.
-2. Write or paste a script.
+2. Write or paste a script. Use the AI chat to help.
 3. Run it locally. Edit, iterate, save.
 
 ---
@@ -93,7 +95,7 @@ Build real-time monitoring dashboards using CLI commands you already know. Seven
 **How to use it:**
 
 1. Create a new Dashboard.
-2. Add cards — each one backed by a CLI command (e.g., `aws cloudwatch get-metric-data`).
+2. Add cards backed by a CLI command (e.g., `aws cloudwatch get-metric-data`). Use the AI chat to help.
 3. Pick a visualization type: list, chart, stat, KPI, gauge, explainer, or mutation.
 4. Add actions to charts. Is the CPU usage higher than you want it to be? Restart the server with one click.
 
@@ -112,7 +114,7 @@ Group related resources into named collections. Your payment service's Lambda + 
 
 ### Knowledge (cloud only)
 
-Team Q&A linked to actual resources. Someone asks _"Why is this Lambda set to a concurrency of 100?"_ — answer once, and the answer stays attached to that resource for everyone.
+Team Q&A linked to actual resources. Someone asks _"Why is this Lambda set to a concurrency of 100?"_, answer once and the answer stays attached to that resource for everyone.
 
 **How to use it:**
 
@@ -127,7 +129,7 @@ _Requires a cloud plan._
 ## Security
 
 - Provider credentials never leave your machine.
-- Bring your own AI API keys — Cuts never sees them.
+- Bring your own AI API keys and make AI API calls from your machine.
 - Commands execute locally on your machine using your CLI permissions.
 - Every destructive or mutating action requires explicit approval.
 - No network requests to Cuts are made unless you pay for a cloud connected account.
@@ -164,7 +166,7 @@ Keys are stored locally on your machine and sent directly to the provider's API.
 
 ## Links
 
-[Website](https://cuts.dev) · [Docs](https://cuts.dev/docs) · [Issues](https://github.com/cutsdotdev/Cuts/issues)
+[Website](https://cuts.dev) · [Integrations](https://cuts.dev/integrations) · [Issues](https://github.com/cutsdotdev/Cuts/issues)
 
 ---
 
