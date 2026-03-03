@@ -1,6 +1,6 @@
 # Cuts
 
-**It's 2026. Here's a DevOps tool to match the year we're in.**
+**Cursor for cloud infrastructure because DevOps deserves better tooling too.**
 
 [![Version](https://img.shields.io/github/v/release/cutsdotdev/Cuts?style=flat-square)](https://github.com/cutsdotdev/Cuts/releases)
 [![Download for macOS](https://img.shields.io/badge/macOS-Download-black?style=flat-square&logo=apple)](https://github.com/cutsdotdev/Cuts/releases)
@@ -9,15 +9,14 @@
 
 ![Cuts demo](images/demo.gif)
 
-Cuts is a desktop app that replaces the 40-tab cloud console chaos with one fast interface. When the CLI becomes the API, the potential is unlimited. Search every resource across every account, talk to an AI that knows about your infrastructure, and build dashboards and scripts. All without leaving your machine. Use your CLI, your permissions, and your AI API key. No account required and no network requests to anywhere but your cloud provider.
+Cuts is a desktop app that replaces the 40-tab cloud console chaos with one fast interface. When the CLI becomes the API, the potential is unlimited. Search every resource across every account, talk to an AI that knows about your infrastructure, and build dashboards and scripts. All without leaving your machine. Use _your_ CLI, _your_ permissions, and _your_ AI API key. No account required and no network requests to anywhere but your cloud and AI providers.
 
 ---
 
 ## Quick Start
 
 1. **Download** — [GitHub Releases](https://github.com/cutsdotdev/Cuts/releases) (macOS · Windows x64 · Windows ARM64) · Linux coming soon
-2. **Open** — Launch the app.
-3. **Connect** — Use the Quick Connect tab to pick cloud providers and then watch your resources sync in seconds.
+2. **Connect** — Use the Quick Connect tab to pick profiles from your cloud providers and then watch your resources sync in seconds.
 
 ---
 
