@@ -23,8 +23,7 @@
 ## Quick Start
 
 1. **Download** — [GitHub Releases](https://github.com/cutsdotdev/Cuts/releases) (macOS · Windows x64 · Windows ARM64) · Linux coming soon
-2. **Open** — Launch the app.
-3. **Connect** — Use the Quick Connect tab to pick cloud providers and then watch your resources sync in seconds.
+2. **Connect** — Use the Quick Connect tab to pick profiles from your cloud providers and then watch your resources sync in seconds.
 
 ---
 
