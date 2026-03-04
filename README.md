@@ -16,7 +16,11 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Integrated-3ECF8E?style=flat-square&logo=supabase)](#connecting-cloud-providers)
 [![Kubernetes (beta)](https://img.shields.io/badge/Kubernetes-Beta-326CE5?style=flat-square&logo=kubernetes)](#connecting-cloud-providers)
 
-![Cuts demo](images/demo.gif)
+
+
+https://github.com/user-attachments/assets/31b51829-27f5-4ce8-a9d8-07fc09ea369c
+
+
 
 ---
 
