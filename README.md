@@ -1,15 +1,22 @@
 # Cuts
 
-**It's 2026. Here's a DevOps tool to match the year we're in.**
+**"Cursor for cloud infrastructure" because DevOps deserves better tooling too.**
 
 [![Version](https://img.shields.io/github/v/release/cutsdotdev/Cuts?style=flat-square)](https://github.com/cutsdotdev/Cuts/releases)
 [![Download for macOS](https://img.shields.io/badge/macOS-Download-black?style=flat-square&logo=apple)](https://github.com/cutsdotdev/Cuts/releases)
 [![Download for Windows x64](https://img.shields.io/badge/Windows%20x64-Download-blue?style=flat-square&logo=windows)](https://github.com/cutsdotdev/Cuts/releases)
 [![Download for Windows ARM64](https://img.shields.io/badge/Windows%20ARM64-Download-blue?style=flat-square&logo=windows)](https://github.com/cutsdotdev/Cuts/releases)
+[![macOS Code Signed](https://img.shields.io/badge/macOS-Code%20Signed-success?style=flat-square&logo=apple)](#verify-macos-code-signing-and-notarization)
+[![Windows Code Signed](https://img.shields.io/badge/Windows-Code%20Signed-success?style=flat-square&logo=windows)](#verify-windows-code-signing)
+[![VirusTotal Scanned](https://img.shields.io/badge/VirusTotal-Scanned-success?style=flat-square&logo=virustotal)](#verify-virustotal-scans)
+
+[![AWS](https://img.shields.io/badge/AWS-Integrated-orange?style=flat-square&logo=amazonaws)](#connecting-cloud-providers)
+[![Azure](https://img.shields.io/badge/Azure-Integrated-0078D4?style=flat-square&logo=microsoftazure)](#connecting-cloud-providers)
+[![GCP](https://img.shields.io/badge/GCP-Integrated-4285F4?style=flat-square&logo=googlecloud)](#connecting-cloud-providers)
+[![Supabase](https://img.shields.io/badge/Supabase-Integrated-3ECF8E?style=flat-square&logo=supabase)](#connecting-cloud-providers)
+[![Kubernetes (beta)](https://img.shields.io/badge/Kubernetes-Beta-326CE5?style=flat-square&logo=kubernetes)](#connecting-cloud-providers)
 
 ![Cuts demo](images/demo.gif)
-
-Cuts is a desktop app that replaces the 40-tab cloud console chaos with one fast interface. When the CLI becomes the API, the potential is unlimited. Search every resource across every account, talk to an AI that knows about your infrastructure, and build dashboards and scripts. All without leaving your machine. Use your CLI, your permissions, and your AI API key. No account required and no network requests to anywhere but your cloud provider.
 
 ---
 
@@ -18,6 +25,24 @@ Cuts is a desktop app that replaces the 40-tab cloud console chaos with one fast
 1. **Download** — [GitHub Releases](https://github.com/cutsdotdev/Cuts/releases) (macOS · Windows x64 · Windows ARM64) · Linux coming soon
 2. **Open** — Launch the app.
 3. **Connect** — Use the Quick Connect tab to pick cloud providers and then watch your resources sync in seconds.
+
+---
+
+## Table of Contents
+
+- [What is Cuts?](#what-is-cuts)
+- [Features](#features)
+  - [Resource Index](#resource-index)
+  - [Console Talk](#console-talk)
+  - [Scripts](#scripts)
+  - [Dashboards](#dashboards)
+  - [Stacks](#stacks)
+  - [Knowledge (cloud only)](#knowledge-cloud-only)
+- [Security](#security)
+- [Connecting Cloud Providers](#connecting-cloud-providers)
+- [AI Setup (BYOK)](#ai-setup-byok)
+- [Verify Signatures and Scans](#verify-signatures-and-scans)
+- [Links](#links)
 
 ---
 
@@ -128,6 +153,8 @@ _Requires a cloud plan._
 
 ## Security
 
+- Code Signed on Mac and Windows.
+- VirusTotal Scans posted with every release.
 - Provider credentials never leave your machine.
 - Bring your own AI API keys and make AI API calls from your machine.
 - Commands execute locally on your machine using your CLI permissions.
@@ -143,15 +170,15 @@ For more details, see the [security documentation](https://cuts.dev/security).
 
 Open **Quick Connect** from the sidebar. Cuts discovers your local CLI profiles and credentials automatically.
 
-| Provider   | Auth Method                                             |
-| ---------- | ------------------------------------------------------- |
-| AWS        | Local CLI profiles (`~/.aws`)                           |
-| GCP        | Application Default Credentials or service account keys |
-| Azure      | Azure CLI login                                         |
-| GitHub     | Personal access token or GitHub CLI                     |
-| GitLab     | Personal access token                                   |
-| Supabase   | Access token                                            |
-| Kubernetes | Kubeconfig contexts (`~/.kube/config`)                  |
+| Provider   | Auth Method                                                                                                                          |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| AWS        | Local CLI profiles (`~/.aws`)                                                                                                        |
+| GCP        | Local CLI profiles or service accounts                                                                                               |
+| Azure      | Local CLI profiles or service principals                                                                                             |
+| Supabase   | Local CLI profiles or personal access token                                                                                          |
+| Kubernetes | (beta) Attach your AWS, GCP, and Azure clusters or connect with local kubectl context, a kubeconfig file, or a service account token |
+| GitHub     | _coming soon to local workspace mode_                                                                                                |
+| GitLab     | _coming soon to local workspace mode_                                                                                                |
 
 ---
 
@@ -161,6 +188,57 @@ Open **Quick Connect** from the sidebar. Cuts discovers your local CLI profiles 
 2. Add your API key for OpenAI, Anthropic, or Google.
 
 Keys are stored locally on your machine and sent directly to the provider's API. Cuts never proxies or stores your AI keys.
+
+---
+
+## Verify Signatures and Scans
+
+### Verify Windows Code Signing
+
+Run either command after downloading a Windows installer:
+
+```powershell
+Get-AuthenticodeSignature .\cuts-x64.exe | Format-List Status, SignerCertificate, TimeStamperCertificate
+```
+
+```powershell
+signtool verify /pa /v .\cuts-x64.exe
+```
+
+You should see a valid Authenticode signature, a trusted certificate chain, and a trusted timestamp.
+
+### Verify macOS Code Signing and Notarization
+
+Run these checks for the macOS DMG installer you downloaded:
+
+```bash
+spctl -a -vv --type open cuts.dmg
+xcrun stapler validate cuts.dmg
+```
+
+You should see Gatekeeper acceptance plus a valid notarization ticket.
+
+### Verify VirusTotal Scans
+
+1. Compute the SHA-256 hash for your downloaded file.
+2. Compare it against the release notes checksum.
+3. Open the matching VirusTotal report.
+
+**macOS/Linux:**
+
+```bash
+shasum -a 256 cuts.dmg
+```
+
+**Windows (PowerShell):**
+
+```powershell
+Get-FileHash .\cuts-x64.exe -Algorithm SHA256
+```
+
+Use the resulting hash at:
+
+`https://www.virustotal.com/gui/file/<sha256>`
 
 ---
 
