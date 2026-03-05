@@ -10,17 +10,16 @@
 [![Windows Code Signed](https://img.shields.io/badge/Windows-Code%20Signed-success?style=flat-square&logo=windows)](#verify-windows-code-signing)
 [![VirusTotal Scanned](https://img.shields.io/badge/VirusTotal-Scanned-success?style=flat-square&logo=virustotal)](#verify-virustotal-scans)
 
-[![AWS](https://img.shields.io/badge/AWS-Integrated-orange?style=flat-square&logo=amazonaws)](#connecting-cloud-providers)
-[![Azure](https://img.shields.io/badge/Azure-Integrated-0078D4?style=flat-square&logo=microsoftazure)](#connecting-cloud-providers)
-[![GCP](https://img.shields.io/badge/GCP-Integrated-4285F4?style=flat-square&logo=googlecloud)](#connecting-cloud-providers)
-[![Supabase](https://img.shields.io/badge/Supabase-Integrated-3ECF8E?style=flat-square&logo=supabase)](#connecting-cloud-providers)
-[![Kubernetes (beta)](https://img.shields.io/badge/Kubernetes-Beta-326CE5?style=flat-square&logo=kubernetes)](#connecting-cloud-providers)
-
-
+[![AWS](https://img.shields.io/badge/AWS-orange?style=flat-square)](#connecting-cloud-providers)
+[![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square)](#connecting-cloud-providers)
+[![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square)](#connecting-cloud-providers)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square)](#connecting-cloud-providers)
+[![EKS](https://img.shields.io/badge/EKS-326CE5?style=flat-square)](#connecting-cloud-providers)
+[![GKE](https://img.shields.io/badge/GKE-326CE5?style=flat-square)](#connecting-cloud-providers)
+[![AKS](https://img.shields.io/badge/AKS-326CE5?style=flat-square)](#connecting-cloud-providers)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square)](#connecting-cloud-providers)
 
 https://github.com/user-attachments/assets/31b51829-27f5-4ce8-a9d8-07fc09ea369c
-
-
 
 ---
 
@@ -51,7 +50,7 @@ https://github.com/user-attachments/assets/31b51829-27f5-4ce8-a9d8-07fc09ea369c
 
 ## What is Cuts?
 
-Cuts is a desktop app for anyone who manages cloud infrastructure. It connects to your AWS, GCP, Azure, GitHub, GitLab, Supabase, and Kubernetes (beta) accounts and gives you:
+Cuts is a desktop app for anyone who manages cloud infrastructure. It connects to your AWS, GCP, Azure, GitHub, GitLab, Supabase, and Kubernetes accounts and gives you:
 
 - A unified search across all connected accounts
 - An AI assistant that sees your real, live resources. Ask complex questions or make quick adjustments (with risk assessments and explicit approval required).
@@ -173,15 +172,15 @@ For more details, see the [security documentation](https://cuts.dev/security).
 
 Open **Quick Connect** from the sidebar. Cuts discovers your local CLI profiles and credentials automatically.
 
-| Provider   | Auth Method                                                                                                                          |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| AWS        | Local CLI profiles (`~/.aws`)                                                                                                        |
-| GCP        | Local CLI profiles or service accounts                                                                                               |
-| Azure      | Local CLI profiles or service principals                                                                                             |
-| Supabase   | Local CLI profiles or personal access token                                                                                          |
-| Kubernetes | (beta) Attach your AWS, GCP, and Azure clusters or connect with local kubectl context, a kubeconfig file, or a service account token |
-| GitHub     | _coming soon to local workspace mode_                                                                                                |
-| GitLab     | _coming soon to local workspace mode_                                                                                                |
+| Provider   | Auth Method                                                                                                                 |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------- |
+| AWS        | Local CLI profiles (`~/.aws`)                                                                                               |
+| GCP        | Local CLI profiles or service accounts                                                                                      |
+| Azure      | Local CLI profiles or service principals                                                                                    |
+| Supabase   | Local CLI profiles or personal access token                                                                                 |
+| Kubernetes | Attach your EKS, GKE, and AKS clusters or connect with local kubectl context, a kubeconfig file, or a service account token |
+| GitHub     | _coming soon to local workspace mode_                                                                                       |
+| GitLab     | _coming soon to local workspace mode_                                                                                       |
 
 ---
 
